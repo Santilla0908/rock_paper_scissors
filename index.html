@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Камень Ножницы Бумага</title>
 		<link rel="stylesheet" href="./css/style.css">
+		<script src="js/script.js" defer></script>
 	</head>
 	
 	<body>
@@ -15,37 +16,36 @@
 			
 			<div class="result">Тут будет результат</div>
 			
-			<div class="buttons_container">
-				<button class="choice_btn">Камень</button>
+			<div class="choices">
+				<button class="choice" id="rock">Камень</button>
 				
-				<button class="choice_btn">Ножницы</button>
+				<button class="choice" id="scissors">Ножницы</button>
 				
-				<button class="choice_btn">Бумага</button>
+				<button class="choice" id="paper">Бумага</button>
 			</div>
 			
 			<div class="statistics">
 				<h2 class="header_statistics">Статистика</h2>
 				<div class="statistics_items">
 					<div class="statistics_item">Побед
-						<p class="number">0</p>
+						<p class="number" id="win">0</p>
 					</div>
 					
 					<div class="statistics_item">Поражений
-						<p class="number">0</p>
+						<p class="number" id="loss">0</p>
 					</div>
 					
 					<div class="statistics_item">Ничьих
-						<p class="number">0</p>
+						<p class="number" id="tie">0</p>
 					</div>
 					
 					<div class="statistics_item">Процент побед
-						<p class="number">0</p>
+						<p class="number" id="winrate">-</p>
 					</div>
 				</div>
 			</div>
 			
 			<button class="reset_stats">Сбросить статистику</button>
 		</div>
-		
 	</body>
 </html>
