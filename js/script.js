@@ -14,6 +14,13 @@ const lossEl = document.querySelector('#loss');
 const winrateEl = document.querySelector('#winrate');
 console.log(`lossEl.innerText`, lossEl.innerText);
 
+const switchEl = document.querySelector('.switch')
+const body = document.body
+
+switchEl.addEventListener('click', () => {
+	body.classList.toggle('dark')
+})
+
 choiceEls.forEach(choiceEl => {
 	console.log(`choiceEl`, choiceEl);
 	choiceEl.addEventListener('click', e => {
