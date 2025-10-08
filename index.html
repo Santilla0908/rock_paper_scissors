@@ -6,7 +6,6 @@
 		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Камень Ножницы Бумага</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<script src="js/script.js" defer></script>
 	</head>
@@ -15,21 +14,25 @@
 		<div class="container">
 			<h1 class="header_game">Камень Ножницы Бумага</h1>
 			
+			<div class="computer_choice"></div>
+			
+			<div class="user_choice"></div>
+			
 			<div class="result">Тут будет результат</div>
 			
 			<div class="choices">
 				<div class="choice" id="rock">
-					<i class="fa fa-hand-rock-o icon" aria-hidden="true"></i>
+					<div class="icon">&#9994;</div>
 					<p class="choice_text">Камень</p>
 				</div>
 				
 				<div class="choice" id="scissors">
-					<i class="fa fa-hand-scissors-o icon" aria-hidden="true"></i>
+					<div class="icon">&#9996;</div>
 					<p class="choice_text">Ножницы</p>
 				</div>
 				
 				<div class="choice" id="paper">
-					<i class="fa fa-hand-paper-o icon" aria-hidden="true"></i>
+					<div class="icon">&#9995;</div>
 					<p class="choice_text">Бумага</p>
 				</div>
 			</div>
