@@ -1,3 +1,18 @@
+:root {
+	--bg-color: #f0f0f3;           /* светлый фон страницы */
+	--text-color: #222222;         /* основной текст */
+	--header-color: #333333;       /* заголовки */
+	--result-text: #111111;        /* текст результата */
+	--icon-color: #555555;         /* цвет иконок */
+	--icon-hover: #333333;         /* hover иконок */
+	--statistics-text: #222222;    /* текст статистики */
+	--switch-bg: #ccc;             /* фон свитча */
+	--switch-circle: #fff;         /* шарик свитча */
+	--button-bg: #4CAF50;          /* кнопка сброса */
+	--button-text: #fff;           /* текст кнопки */
+	--button-hover: #45a049;       /* hover кнопки */
+}
+
 body,
 h1,
 h2,
@@ -7,11 +22,24 @@ p {
 
 body {
 	overflow-y: hidden;
-	background-color: rgba(130, 130, 130, 0.5);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .dark {
-	background-color: rgba(130, 130, 130)
+	--bg-color: #121212;           /* тёмный фон страницы */
+	--text-color: #e0e0e0;         /* основной текст */
+	--header-color: #ffffff;       /* заголовки */
+	--result-text: #ffffff;        /* текст результата */
+	--icon-color: #dddddd;         /* цвет иконок */
+	--icon-hover: #d0e1ff;         /* hover иконок */
+	--statistics-text: #ffffff;    /* текст статистики */
+	--switch-bg: #444;             /* фон свитча */
+	--switch-circle: #fff;         /* шарик свитча */
+	--button-bg: #2e7d32;          /* кнопка сброса */
+	--button-text: #fff;           /* текст кнопки */
+	--button-hover: #1b5e20;       /* hover кнопки */
 }
 
 button {
@@ -29,9 +57,9 @@ button {
 }
 
 .header_game {
-	color: #333;
 	font-size: 60px;
 	height: 100px;
+	color: var(--header-color);
 }
 
 .choices {
@@ -46,15 +74,20 @@ button {
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	color: white;
 	font-size: 24px;
 	cursor: pointer;
 	width: 300px;
+	color: var(--text-color);
 }
 
 .icon {
+	color: var(--icon-color);
 	font-size: 150px;
 	margin: 0 0 30px 0;
+}
+
+.icon:hover {
+	color: var(--icon-hover);
 }
 
 .choice_text {
@@ -70,14 +103,17 @@ button {
 	height: 100px;
 	width: 100%;
 	margin: 0 0 50px;
+	color: var(--result-text);
 }
 
 .statistics {
 	width: 100%;
 	margin: 0 0 50px 0;
+	color: var(--statistics-text);
 }
 
 .header_statistics {
+	color: var(--header-color);
 	font-size: 40px;
 	text-align: center;
 	height: 100px;
@@ -100,13 +136,18 @@ button {
 }
 
 .reset_stats {
-	background-color: #ff9800;
-	color: white;
+	background-color: var(--button-bg);
+	color: var(--button-text);
 	font-size: 16px;
 	cursor: pointer;
 	border-radius: 5px;
 	width: 200px;
 	height: 50px;
+	transition: background-color 0.2s;
+}
+
+.reset_stats:hover {
+	background-color: var(--button-hover);
 }
 
 .switch {
@@ -115,7 +156,7 @@ button {
 	top: 15px;
 	width: 80px;
 	height: 40px;
-	background-color: #333333;
+	background-color: var(--switch-bg);
 	border-radius: 30px;
 	cursor: pointer;
 	transition: background-color 0.3s;
@@ -124,12 +165,12 @@ button {
 .circle {
 	width: 30px;
 	height: 30px;
-	background-color: #fff;
+	background-color: var(--switch-circle);
 	border-radius: 50%;
 	position: absolute;
 	top: 4px;
 	left: 4px;
-	transition: transform 0.3s ease;
+	transition: transform 1s ease;
 }
 
 .dark .circle {
