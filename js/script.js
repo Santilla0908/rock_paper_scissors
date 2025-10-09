@@ -3,7 +3,6 @@ console.log(`choiceEls`, choiceEls);
 
 const computerChoiceEl = document.querySelector('.computer_choice');
 const userChoiceEl = document.querySelector('.user_choice');
-
 const resultEl = document.querySelector('.result');
 console.log(`resultEl`, resultEl);
 
