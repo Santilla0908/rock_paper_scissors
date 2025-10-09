@@ -98,7 +98,11 @@ button {
 	margin: 0 0 30px 0;
 	font-size: 150px;
 	color: var(--icon-color);
-	text-shadow: 2px 2px 4px rgba(100, 100, 100, 1);
+	transition: filter 0.2s;
+}
+
+.choice:hover .icon {
+	filter: drop-shadow(0 0 2px var(--icon-hover)) drop-shadow(0 0 1px var(--icon-hover)) drop-shadow(0 0 6px var(--icon-hover));
 }
 
 .choice_text {
@@ -200,12 +204,6 @@ button {
 	opacity: 1;
 }
 
-.icon {
-	pointer-events: none;
-	opacity: 0.6;
-	transition: opacity 0.3s;
-}
-
 .circle {
 	display: flex;
 	justify-content: center;
@@ -225,8 +223,6 @@ button {
 	position: absolute;
 	font-size: 20px;
 	line-height: 1;
-	transition: opacity 100ms ease;
-	transform: scale(1);
 	pointer-events: none;
 	opacity: 0;
 }
