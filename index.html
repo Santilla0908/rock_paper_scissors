@@ -37,23 +37,33 @@
 				</div>
 			</div>
 			
-			<div class="statistics">
+			<div class="statistics_container">
 				<h2 class="header_statistics">Статистика</h2>
-				<div class="statistics_items">
-					<div class="statistics_item">Побед
-						<p class="number" id="win">0</p>
+				<div class="statistics">
+					
+					<div class="statistic">
+						<p class="statistic_label">Количество игр</p>
+						<p class="statistic_value nullable_statistic" id="games">0</p>
 					</div>
 					
-					<div class="statistics_item">Поражений
-						<p class="number" id="loss">0</p>
+					<div class="statistic">
+						<p class="statistic_label">Побед</p>
+						<p class="statistic_value nullable_statistic" id="win">0</p>
 					</div>
 					
-					<div class="statistics_item">Ничьих
-						<p class="number" id="tie">0</p>
+					<div class="statistic">
+						<p class="statistic_label">Поражений</p>
+						<p class="statistic_value nullable_statistic" id="loss">0</p>
 					</div>
 					
-					<div class="statistics_item">Процент побед
-						<p class="number" id="winrate">-</p>
+					<div class="statistic">
+						<p class="statistic_label">Ничьих</p>
+						<p class="statistic_value nullable_statistic" id="tie">0</p>
+					</div>
+					
+					<div class="statistic">
+						<p class="statistic_label">Процент побед</p>
+						<p class="statistic_value" id="winrate">-</p>
 					</div>
 				</div>
 			</div>

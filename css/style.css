@@ -101,7 +101,7 @@ button {
 }
 
 .choice:hover .icon {
-	filter: drop-shadow(0 0 2px var(--icon-hover)) drop-shadow(0 0 1px var(--icon-hover)) drop-shadow(0 0 6px var(--icon-hover));
+	text-shadow: 0 0 2px var(--icon-hover), 0 0 1px var(--icon-hover), 0 0 6px var(--icon-hover);
 }
 
 .choice_text {
@@ -121,7 +121,7 @@ button {
 	color: var(--result-text);
 }
 
-.statistics {
+.statistics_container {
 	width: 100%;
 	margin: 0 0 50px 0;
 	color: var(--statistics-text);
@@ -134,13 +134,13 @@ button {
 	text-align: center;
 }
 
-.statistics_items {
+.statistics {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
-.statistics_item {
+.statistic {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
