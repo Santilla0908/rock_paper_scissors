@@ -25,7 +25,8 @@ resetStatsEl.addEventListener('click', () => {
 });
 
 switchEl.addEventListener('click', () => {
-	document.documentElement.classList.toggle('dark');
+	const isDark = document.documentElement.classList.toggle('dark');
+	localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
 const rules = {
@@ -42,6 +43,7 @@ const rules = {
 		beats: 'rock'
 	}
 };
+
 const resultTranslation = {
 	tie: 'Ничья',
 	win: 'Вы победили',
@@ -103,10 +105,6 @@ if (statistics) {
 		valueEl.innerText = statistics[key];
 	}
 }
-
-// window.requestAnimationFrame(() => {
-//
-// });
 
 
 
