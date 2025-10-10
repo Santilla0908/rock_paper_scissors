@@ -128,7 +128,7 @@ button {
 }
 
 .header_statistics {
-	height: clamp(50px, 15vw, 100px);
+	height: clamp(70px, 15vw, 100px);
 	font-size: clamp(30px, 10vw, 40px);
 	color: var(--header-color);
 	text-align: center;
@@ -145,7 +145,7 @@ button {
 	justify-content: center;
 	flex-direction: column;
 	width: 33%;
-	height: 100px;
+	height: clamp(50px, 15vw, 100px);
 	font-size: clamp(15px, 4.5vw, 20px);
 	text-align: center;
 }
@@ -250,4 +250,15 @@ button {
 
 .dark .circle {
 	transform: translateX(41px)
+}
+
+@media (width <= 850px) {
+	.statistics {
+		flex-wrap: wrap;
+	}
+
+	.statistic:first-child,
+	.statistic:last-child {
+		width: 100%;
+	}
 }
