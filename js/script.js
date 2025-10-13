@@ -22,6 +22,15 @@ resetStatsEl.addEventListener('click', () => {
 		nullableStatisticEl.innerText = '0';
 	});
 	winrateEl.innerText = '-';
+
+	const clearedStatistics = {
+		games: 0,
+		win: 0,
+		loss: 0,
+		tie: 0,
+		winrate: '-'
+	};
+	localStorage.setItem('statistics', JSON.stringify(clearedStatistics));
 });
 
 switchEl.addEventListener('click', () => {
