@@ -1,87 +1,87 @@
 <!doctype html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport"
-		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Камень Ножницы Бумага</title>
-		<script>
-			(() => document.documentElement.classList.toggle('dark', localStorage.getItem('theme') !== 'light'))();
-		</script>
-		<link rel="stylesheet" href="./css/style.css">
-		<script src="js/script.js" defer></script>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		  name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Камень Ножницы Бумага</title>
+	<script>
+		document.documentElement.classList.toggle('dark', localStorage.getItem('theme') !== 'light');
+	</script>
+	<link href="./css/style.css" rel="stylesheet">
+	<script defer src="js/script.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<h1 class="header_game">Камень Ножницы Бумага</h1>
 	
-	<body>
-		<div class="container">
-			<h1 class="header_game">Камень Ножницы Бумага</h1>
+	<div class="computer_choice"></div>
+	
+	<div class="user_choice"></div>
+	
+	<div class="result">Тут будет результат</div>
+	
+	<div class="choices">
+		<div class="choice" id="rock">
+			<div class="icon">&#9994;</div>
+			<p class="choice_text">Камень</p>
+		</div>
+		
+		<div class="choice" id="scissors">
+			<div class="icon">&#9996;</div>
+			<p class="choice_text">Ножницы</p>
+		</div>
+		
+		<div class="choice" id="paper">
+			<div class="icon">&#9995;</div>
+			<p class="choice_text">Бумага</p>
+		</div>
+	</div>
+	
+	<div class="statistics_container">
+		<h2 class="header_statistics">Статистика</h2>
+		<div class="statistics">
 			
-			<div class="computer_choice"></div>
-			
-			<div class="user_choice"></div>
-			
-			<div class="result">Тут будет результат</div>
-			
-			<div class="choices">
-				<div class="choice" id="rock">
-					<div class="icon">&#9994;</div>
-					<p class="choice_text">Камень</p>
-				</div>
-				
-				<div class="choice" id="scissors">
-					<div class="icon">&#9996;</div>
-					<p class="choice_text">Ножницы</p>
-				</div>
-				
-				<div class="choice" id="paper">
-					<div class="icon">&#9995;</div>
-					<p class="choice_text">Бумага</p>
-				</div>
+			<div class="statistic">
+				<p class="statistic_label">Количество игр</p>
+				<p class="statistic_value nullable_statistic" id="games">0</p>
 			</div>
 			
-			<div class="statistics_container">
-				<h2 class="header_statistics">Статистика</h2>
-				<div class="statistics">
-					
-					<div class="statistic">
-						<p class="statistic_label">Количество игр</p>
-						<p class="statistic_value nullable_statistic" id="games">0</p>
-					</div>
-					
-					<div class="statistic">
-						<p class="statistic_label">Побед</p>
-						<p class="statistic_value nullable_statistic" id="win">0</p>
-					</div>
-					
-					<div class="statistic">
-						<p class="statistic_label">Поражений</p>
-						<p class="statistic_value nullable_statistic" id="loss">0</p>
-					</div>
-					
-					<div class="statistic">
-						<p class="statistic_label">Ничьих</p>
-						<p class="statistic_value nullable_statistic" id="tie">0</p>
-					</div>
-					
-					<div class="statistic">
-						<p class="statistic_label">Процент побед</p>
-						<p class="statistic_value" id="winrate">-</p>
-					</div>
-				</div>
+			<div class="statistic">
+				<p class="statistic_label">Побед</p>
+				<p class="statistic_value nullable_statistic" id="win">0</p>
 			</div>
 			
-			<button class="reset_stats">Сбросить статистику</button>
+			<div class="statistic">
+				<p class="statistic_label">Поражений</p>
+				<p class="statistic_value nullable_statistic" id="loss">0</p>
+			</div>
 			
+			<div class="statistic">
+				<p class="statistic_label">Ничьих</p>
+				<p class="statistic_value nullable_statistic" id="tie">0</p>
+			</div>
 			
-			<div class="switch">
-				<span class="label night">Ночь</span>
-				<span class="label day">День</span>
-				<div class="circle">
-					<span class="inner-icon sun">☀️</span>
-					<span class="inner-icon moon">🌙</span>
-				</div>
+			<div class="statistic">
+				<p class="statistic_label">Процент побед</p>
+				<p class="statistic_value" id="winrate">-</p>
 			</div>
 		</div>
-	</body>
+	</div>
+	
+	<button class="reset_stats">Сбросить статистику</button>
+	
+	
+	<div class="switch">
+		<span class="label night">Ночь</span>
+		<span class="label day">День</span>
+		<div class="circle">
+			<span class="inner-icon sun">☀️</span>
+			<span class="inner-icon moon">🌙</span>
+		</div>
+	</div>
+</div>
+</body>
 </html>

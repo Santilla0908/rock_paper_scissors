@@ -52,59 +52,51 @@ const rules = {
 		beats: 'rock'
 	}
 };
-
 const resultTranslation = {
 	tie: 'Ничья',
 	win: 'Вы победили',
 	loss: 'Вы проиграли'
 };
+const doGame = () => {
+	const userChoice = choiceEl.id;
+	const computerChoice = getComputerChoice();
+	computerChoiceEl.innerText = `Выбор компьютера: ${ rules[computerChoice].translation }`;
+	userChoiceEl.innerText = `Ваш выбор: ${ rules[userChoice].translation }`;
+
+	const result = (() => {
+		if (userChoice === computerChoice) return 'tie';
+		if (rules[userChoice].beats === computerChoice) return 'win';
+		return 'loss';
+	})();
+	resultEl.innerText = resultTranslation[result];
+
+	const statEl = (() => {
+		if (result === 'tie') return tieEl;
+		if (result === 'win') return winEl;
+		if (result === 'loss') return lossEl;
+	})();
+	const currentStat = parseInt(statEl.innerText);
+	statEl.innerText = currentStat + 1;
+
+	const totalGamesCount = parseInt(lossEl.innerText) + parseInt(winEl.innerText) + parseInt(tieEl.innerText);
+	gamesEl.innerText = totalGamesCount;
+
+	const totalWinsCount = parseInt(winEl.innerText);
+
+	const winrate = Math.round((totalWinsCount / totalGamesCount) * 100) + '%';
+	winrateEl.innerText = winrate;
+
+	const statistics = {
+		games: totalGamesCount,
+		win: totalWinsCount,
+		loss: lossEl.innerText,
+		tie: tieEl.innerText,
+		winrate
+	};
+	localStorage.setItem('statistics', JSON.stringify(statistics));
+}
 choiceEls.forEach(choiceEl => {
-	console.log(`choiceEl`, choiceEl);
-	choiceEl.addEventListener('click', e => {
-		const userChoice = choiceEl.id;
-
-		const computerChoice = getComputerChoice();
-
-		computerChoiceEl.innerText = `Выбор компьютера: ${ rules[computerChoice].translation }`;
-		userChoiceEl.innerText = `Ваш выбор: ${ rules[userChoice].translation }`;
-
-		const result = (() => {
-			if (userChoice === computerChoice) return 'tie';
-			if (rules[userChoice].beats === computerChoice) return 'win';
-			return 'loss';
-		})();
-
-		resultEl.innerText = resultTranslation[result];
-
-		const statEl = (() => {
-			if (result === 'tie') return tieEl;
-			if (result === 'win') return winEl;
-			if (result === 'loss') return lossEl;
-		})();
-
-		const currentStat = parseInt(statEl.innerText);
-		statEl.innerText = currentStat + 1;
-
-		const totalGamesCount = parseInt(lossEl.innerText) + parseInt(winEl.innerText) + parseInt(tieEl.innerText);
-
-		gamesEl.innerText = totalGamesCount;
-
-		const totalWinsCount = parseInt(winEl.innerText);
-
-		const winrate = Math.round((totalWinsCount / totalGamesCount) * 100) + '%';
-
-		winrateEl.innerText = winrate;
-
-		const statistics = {
-			games: totalGamesCount,
-			win: totalWinsCount,
-			loss: lossEl.innerText,
-			tie: tieEl.innerText,
-			winrate
-		};
-
-		localStorage.setItem('statistics', JSON.stringify(statistics));
-	});
+	choiceEl.addEventListener('click', doGame);
 });
 
 const statistics = JSON.parse(localStorage.getItem('statistics'));

@@ -35,16 +35,16 @@ p {
 	margin: 0;
 }
 
-body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	transition: background-color 0.3s, color 0.3s;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
 button {
 	padding: 0;
 	border: none;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-family: sans-serif;
+	color: var(--text-color);
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -53,7 +53,7 @@ button {
 	flex-direction: column;
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: 5rem 0;
+	padding: 80px 0;
 }
 
 .header_game {
@@ -81,11 +81,11 @@ button {
 	width: clamp(50px, 15vw, 300px);
 	font-size: 24px;
 	color: var(--text-color);
-	cursor: pointer;
 	opacity: 0.8;
-	-webkit-user-select: none;
+	cursor: pointer;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -105,8 +105,8 @@ button {
 }
 
 .choice_text {
-	text-transform: uppercase;
 	font-size: clamp(18px, 3vw, 25px);
+	text-transform: uppercase;
 }
 
 .result {
@@ -166,31 +166,31 @@ button {
 }
 
 .switch {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: absolute;
 	top: 15px;
 	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 80px;
 	height: 40px;
 	border-radius: 30px;
 	background-color: var(--switch-bg);
 	cursor: pointer;
-	transition: background-color 0.3s;
-	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	-webkit-user-select: none;
 	user-select: none;
+	transition: background-color 0.3s;
 }
 
 .label {
-	text-align: center;
 	display: flex;
 	align-items: center;
 	align-content: center;
 	margin: 0 0 4px 0;
 	font-size: 14px;
+	text-align: center;
 }
 
 :not(.dark) .day {
@@ -210,26 +210,25 @@ button {
 }
 
 .circle {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: absolute;
 	top: 4px;
 	left: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
 	background-color: var(--switch-circle);
-	transition: transform 1s cubic-bezier(0.2,0.8,0.2,1);
 	overflow: visible;
+	transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .inner-icon {
 	position: absolute;
 	font-size: 20px;
-	line-height: 1;
-	pointer-events: none;
 	opacity: 0;
+	pointer-events: none;
 }
 
 :not(.dark) .inner-icon.sun {
