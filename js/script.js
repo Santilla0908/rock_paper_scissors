@@ -9,7 +9,7 @@ const lossEl = document.querySelector('#loss');
 const winrateEl = document.querySelector('#winrate');
 const resetStatsEl = document.querySelector('.reset_stats');
 const nullableStatisticEls = document.querySelectorAll('.nullable_statistic');
-const switchEl = document.querySelector('.switch');
+const switchEl = document.querySelector('.switch_theme');
 
 const choices = [ 'rock', 'scissors', 'paper' ];
 const getRandomNumber = (min = 0, max = 2) => {
@@ -57,7 +57,8 @@ const resultTranslation = {
 	win: 'Вы победили',
 	loss: 'Вы проиграли'
 };
-const doGame = () => {
+const doGame = (event) => {
+	const choiceEl = event.currentTarget;
 	const userChoice = choiceEl.id;
 	const computerChoice = getComputerChoice();
 	computerChoiceEl.innerText = `Выбор компьютера: ${ rules[computerChoice].translation }`;

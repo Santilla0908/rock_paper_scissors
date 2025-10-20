@@ -15,13 +15,13 @@
 
 <body>
 <div class="container">
-	<h1 class="header_game">Камень Ножницы Бумага</h1>
+	<header class="header">Камень Ножницы Бумага</header>
 	
-	<div class="computer_choice"></div>
-	
-	<div class="user_choice"></div>
-	
-	<div class="result">Тут будет результат</div>
+	<div class="results">
+		<div class="computer_choice"></div>
+		<div class="user_choice"></div>
+		<div class="result">Тут будет результат</div>
+	</div>
 	
 	<div class="choices">
 		<div class="choice" id="rock">
@@ -41,7 +41,7 @@
 	</div>
 	
 	<div class="statistics_container">
-		<h2 class="header_statistics">Статистика</h2>
+		<header class="statistics_header">Статистика</header>
 		<div class="statistics">
 			
 			<div class="statistic">
@@ -69,17 +69,17 @@
 				<p class="statistic_value" id="winrate">-</p>
 			</div>
 		</div>
+		
+		<button class="reset_stats">Сбросить статистику</button>
 	</div>
 	
-	<button class="reset_stats">Сбросить статистику</button>
 	
-	
-	<div class="switch">
-		<span class="label night">Ночь</span>
-		<span class="label day">День</span>
-		<div class="circle">
-			<span class="inner-icon sun">☀️</span>
-			<span class="inner-icon moon">🌙</span>
+	<div class="switch_theme">
+		<span class="switch_theme_label night">Ночь</span>
+		<span class="switch_theme_label day">День</span>
+		<div class="switch_theme_circle">
+			<span class="switch_theme_circle_icon sun">☀️</span>
+			<span class="switch_theme_circle_icon moon">🌙</span>
 		</div>
 	</div>
 </div>
